@@ -1,12 +1,18 @@
 package com.ljj.ioc;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  * @Author liujj
- * @Description TODO
+ * @Description 测试
  * @Date 2019/8/22 11:12
  */
+@Component
 public class FXNewsProvider {
+    @Autowired
     private IFXNewsListener newsListener;
+    @Autowired
     private IFXNewsPersister newsPersistener;
 
     public FXNewsProvider(IFXNewsListener newsListener, IFXNewsPersister newsPersistener) {
@@ -25,7 +31,6 @@ public class FXNewsProvider {
     public void setNewsPersistener(IFXNewsPersister newsPersistener) {
         this.newsPersistener = newsPersistener;
     }
-
 
 
     public void getAndPersistNews() {

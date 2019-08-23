@@ -1,14 +1,23 @@
-<beans xmlns="http://www.springframework.org/schema/beans"
-
+<beans default-lazy-init="true" xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!--<bean id="c">-->
-    <!--<constructor-arg index="0">-->
-    <!--<ref>-->
-    <!--</constructor-arg>-->
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+    <description>这是一个描述文件</description>
+    <!--<bean id="djNewsProvider" class="com.ljj.ioc.FXNewsProvider">-->
+    <!--<constructor-arg index="0">-->
+    <!--<ref bean="djNewsListener"></ref>-->
+    <!--</constructor-arg>-->
+    <!--<constructor-arg index="1">-->
+    <!--<ref bean="djNewsPersister"></ref>-->
+    <!--</constructor-arg>-->
     <!--</bean>-->
 
+    <!--<bean id="djNewsListener" class="com.ljj.ioc.impl.DowJonesNewsListener"></bean>-->
+    <!--<bean id="djNewsPersister" class="com.ljj.ioc.impl.DowJonesNewsPersister"></bean>-->
+
+    <!--启动注解扫描-->
+    <context:component-scan base-package="com.ljj.*"></context:component-scan>
 </beans>
