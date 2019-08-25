@@ -1,4 +1,4 @@
-package com.ljj.ioc;
+package com.ljj.ioc.chapter4;
 
 /**
  * @Author liujj
@@ -10,14 +10,11 @@ public class FXNewBean {
 
     private String name;
 
+    public FXNewBean() {
+    }
+
     public FXNewBean(String name) {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "FXNewBean{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 }

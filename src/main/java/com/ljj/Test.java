@@ -1,8 +1,8 @@
 package com.ljj;
 
-import com.ljj.ioc.FXNewsProvider;
-import com.ljj.ioc.impl.DowJonesNewsListener;
-import com.ljj.ioc.impl.DowJonesNewsPersister;
+import com.ljj.ioc.chapter4.FXNewsProvider;
+import com.ljj.ioc.chapter4.impl.DowJonesNewsListener;
+import com.ljj.ioc.chapter4.impl.DowJonesNewsPersister;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.PropertyValue;
 import org.springframework.beans.factory.BeanFactory;

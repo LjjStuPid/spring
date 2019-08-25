@@ -1,4 +1,4 @@
-package com.ljj.ioc;
+package com.ljj.ioc.chapter4;
 
 public interface IFXNewsPersister {
 

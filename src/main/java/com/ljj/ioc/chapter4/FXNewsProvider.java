@@ -1,4 +1,4 @@
-package com.ljj.ioc;
+package com.ljj.ioc.chapter4;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

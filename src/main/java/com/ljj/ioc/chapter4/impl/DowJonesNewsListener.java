@@ -1,7 +1,7 @@
-package com.ljj.ioc.impl;
+package com.ljj.ioc.chapter4.impl;
 
-import com.ljj.ioc.FXNewBean;
-import com.ljj.ioc.IFXNewsListener;
+import com.ljj.ioc.chapter4.FXNewBean;
+import com.ljj.ioc.chapter4.IFXNewsListener;
 import org.springframework.stereotype.Component;
 
 /**
