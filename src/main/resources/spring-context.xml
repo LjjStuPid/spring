@@ -1,10 +1,12 @@
 <beans default-lazy-init="true" xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans.xsd">
+http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+       xmlns:context="http://www.springframework.org/schema/context">
+    <context:component-scan base-package="com.ljj.ioc"></context:component-scan>
 
 
-    <description>这是一个描述文件</description>
+    <!--<description>这是一个描述文件</description>-->
 
 
     <!--<bean id="FXNewsProvider" class="com.ljj.ioc.chapter4.FXNewsProvider">-->
@@ -88,5 +90,62 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="mockPersister" class="com.ljj.ioc.chapter4.MockNewsPersister">
         <lookup-method name="getFxNewBean" bean="newsBean"/>
     </bean>
+
+
+    <bean id="dateFoo" class="com.ljj.ioc.chapter4.DateFoo">
+        <property name="date">
+            <value>2017/10/16</value>
+        </property>
+    </bean>
+
+    <!--<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
+    <!--<property name="customEditors">-->
+    <!--<map>-->
+    <!--<entry key="java.util.Date">-->
+    <!--<ref bean="datePropertyEditor"/>-->
+    <!--</entry>-->
+    <!--</map>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="datePropertyEditor" class="com.ljj.ioc.chapter4.DatePropertyEditor">-->
+    <!--<property name="datePattern">-->
+    <!--<value>yyyy/MM/dd</value>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+    <bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="propertyEditorRegistrars">
+            <list>
+                <ref bean="datePropertyEditorRegistar"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="datePropertyEditorRegistar" class="com.ljj.ioc.chapter4.DatePropertyEditorRegistar">
+        <property name="propertyEditor">
+            <ref bean="datePropertyEditor"/>
+        </property>
+    </bean>
+
+    <bean id="datePropertyEditor" class="com.ljj.ioc.chapter4.DatePropertyEditor">
+        <property name="datePattern">
+            <value>yyyy/MM/dd</value>
+        </property>
+    </bean>
+
+    <bean id="passwordDecoderPostProcessor" class="com.ljj.ioc.chapter4.PasswordDecodePostProcessor">
+
+    </bean>
+
+    <bean id="bar11" class="com.ljj.ioc.chapter4.Bar">
+        <property name="username">
+            <value>fff</value>
+        </property>
+        <property name="password">
+            <value>jkklk</value>
+        </property>
+    </bean>
+
 
 </beans>
