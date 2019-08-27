@@ -1,4 +1,4 @@
-package com.ljj;
+package com.ljj.ioc.chapter4;
 
 import com.ljj.ioc.chapter4.FXNewsProvider;
 import com.ljj.ioc.chapter4.impl.DowJonesNewsListener;

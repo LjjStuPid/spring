@@ -15,8 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class PasswordDecodePostProcessor implements BeanPostProcessor, InitializingBean {
     @Override
     public Object postProcessBeforeInitialization(Object object, String s) throws BeansException {
-
-        System.out.println("PasswordDecodePostProcessor");
+        System.out.println("测试" + object.getClass());
         if (object instanceof PasswordDecodable) {
 
             String encodedPassword = ((PasswordDecodable) object).getEncodedPassword();
@@ -40,9 +39,6 @@ public class PasswordDecodePostProcessor implements BeanPostProcessor, Initializ
     public static void main(String[] args) {
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
-
-//        ConfigurableBeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("spring-context.xml"));
-//        beanFactory.addBeanPostProcessor(new PasswordDecodePostProcessor());
         DowJonesNewsListener dowJonesNewsListener = (DowJonesNewsListener) applicationContext.getBean("dowJonesNewsListener");
         System.out.println(dowJonesNewsListener);
 
