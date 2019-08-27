@@ -147,5 +147,9 @@ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springfr
         </property>
     </bean>
 
+    <bean id="methodExecListener" class="com.ljj.ioc.chapter5.eventpublish.spring.MethodExecutrionEventListener"></bean>
+
+    <bean id="evtPublisher" class="com.ljj.ioc.chapter5.eventpublish.spring.MethodExecutionEventPublisher"></bean>
+
 
 </beans>
