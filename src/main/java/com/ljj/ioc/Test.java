@@ -1,24 +1,18 @@
 package com.ljj.ioc;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.lang.reflect.Method;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
 
 public class Test {
 
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
-        Demo Demo = (Demo) applicationContext.getBean("demo");
-        DemoA demoA = (DemoA) applicationContext.getBean("demoA");
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
+//        Demo demo = (Demo) applicationContext.getBean("demo");
+//        System.out.println(demo);
 
-        Class clazz = demoA.getClass();
-        Method[] methods = clazz.getMethods();
+        XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(new ClassPathResource("spring-context.xml"));
+//        System.out.println(xmlBeanFactory.);
 
-        for (Method method : methods) {
-            method.getParameterAnnotations();
-            System.out.println(method.getName());
-        }
 
     }
 }

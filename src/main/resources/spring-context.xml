@@ -148,7 +148,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springfr
     <!--<bean id="evtPublisher" class="com.ljj.ioc.chapter5.eventpublish.spring.MethodExecutionEventPublisher"></bean>-->
 
     <bean id="beanPostProcessorDemo" class="com.ljj.ioc.BeanPostProcessorDemo"></bean>
-    <bean id="demo" class="com.ljj.ioc.Demo"></bean>
-    <bean id="demoA" class="com.ljj.ioc.DemoA"></bean>
+    <bean id="demo" class="com.ljj.ioc.Demo" scope="singleton"></bean>
 
 </beans>
