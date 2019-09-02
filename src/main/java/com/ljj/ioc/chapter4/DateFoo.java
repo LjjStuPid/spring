@@ -33,7 +33,7 @@ public class DateFoo {
     }
 
     public static void main(String[] args) {
-        XmlBeanFactory beanFactory =new XmlBeanFactory(new ClassPathResource("spring-context.xml"));
+        XmlBeanFactory beanFactory = new XmlBeanFactory(new ClassPathResource("spring-context.xml"));
 
 //        //beanfactory代码注册
 //        CustomEditorConfigurer ceConfigurer = new CustomEditorConfigurer();

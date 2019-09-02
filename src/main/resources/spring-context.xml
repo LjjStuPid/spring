@@ -96,6 +96,12 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</property>-->
     <!--</bean>-->
 
+    <!--<bean id="datePropertyEditor" class="com.ljj.ioc.chapter4.DatePropertyEditor">-->
+    <!--<property name="datePattern">-->
+    <!--<value>yyyy/MM/dd</value>-->
+    <!--</property>-->
+    <!--</bean>-->
+
     <!--<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
     <!--<property name="customEditors">-->
     <!--<map>-->
@@ -106,11 +112,6 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="datePropertyEditor" class="com.ljj.ioc.chapter4.DatePropertyEditor">-->
-    <!--<property name="datePattern">-->
-    <!--<value>yyyy/MM/dd</value>-->
-    <!--</property>-->
-    <!--</bean>-->
 
     <!--<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">-->
     <!--<property name="propertyEditorRegistrars">-->
