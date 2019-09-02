@@ -1,5 +1,6 @@
 package com.ljj.ioc;
 
+import com.ljj.ioc.chapter4.DataSource;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -7,8 +8,8 @@ public class Test {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
-        Demo demo = (Demo) applicationContext.getBean("demo");
-        System.out.println(demo);
+        DataSource dataSource = (DataSource) applicationContext.getBean("dataSource");
+        System.out.println(dataSource);
 
 //
 //        DateFoo dateFoo = (DateFoo) applicationContext.getBean("dateFoo");
