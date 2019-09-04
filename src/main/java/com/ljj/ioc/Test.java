@@ -1,15 +1,20 @@
 package com.ljj.ioc;
 
 import com.ljj.ioc.chapter4.DataSource;
+import com.ljj.ioc.chapter4.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
 
     public static void main(String[] args) {
+//        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
+//        DataSource dataSource = (DataSource) applicationContext.getBean("dataSource");
+//        System.out.println(dataSource);
+
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
-        DataSource dataSource = (DataSource) applicationContext.getBean("dataSource");
-        System.out.println(dataSource);
+        User user = (User) applicationContext.getBean("user");
+        System.out.println(user);
 
 //
 //        DateFoo dateFoo = (DateFoo) applicationContext.getBean("dateFoo");

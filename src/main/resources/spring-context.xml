@@ -153,22 +153,27 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--<bean id="beanPostProcessorDemo" class="com.ljj.ioc.BeanPostProcessorDemo"></bean>-->
     <!--<bean id="demo" class="com.ljj.ioc.Demo" scope="singleton"></bean>-->
 
-    <bean id="dataSource" class="com.ljj.ioc.chapter4.DataSource">
-        <property name="username">
-            <value>${jdbc.username}</value>
-        </property>
-        <property name="password">
-            <value>${jdbc.password}</value>
-        </property>
-    </bean>
+    <!--<bean id="dataSource" class="com.ljj.ioc.chapter4.DataSource">-->
+    <!--<property name="username">-->
+    <!--<value>${jdbc.username}</value>-->
+    <!--</property>-->
+    <!--<property name="password">-->
+    <!--<value>${jdbc.password}</value>-->
+    <!--</property>-->
+    <!--</bean>-->
 
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations">
-            <list>
-                <value>test.properties</value>
-            </list>
-        </property>
+    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+    <!--<property name="locations">-->
+    <!--<list>-->
+    <!--<value>test.properties</value>-->
+    <!--</list>-->
+    <!--</property>-->
+    <!--</bean>-->
 
+    <bean id="user" class="com.ljj.ioc.chapter4.User">
+        <property name="date">
+            <value>2019/09/04</value>
+        </property>
     </bean>
 
 
