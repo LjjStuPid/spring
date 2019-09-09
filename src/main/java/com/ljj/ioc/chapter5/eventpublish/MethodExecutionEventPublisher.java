@@ -14,7 +14,7 @@ public class MethodExecutionEventPublisher {
 
     public void methodToMonitor() {
         MethodExectionEvent event2Publish = new MethodExectionEvent(this, "methodToMonitor");
-        publisherEvent(MethodExecutionStatus.BEGIN,event2Publish);
+        publisherEvent(MethodExecutionStatus.BEGIN, event2Publish);
         event2Publish.getMethodName();
         publisherEvent(MethodExecutionStatus.END, event2Publish);
     }
