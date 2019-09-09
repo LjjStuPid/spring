@@ -5,6 +5,7 @@ package com.ljj.aop.chapter10;
  * @Description TODO
  * @Date 2019/9/9 14:24
  */
+@AnyJoinpointAnnotation
 public class Foo {
 
     public void method1() {

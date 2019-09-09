@@ -13,6 +13,6 @@ public class AnnotationAwareAspectJAutoProxyCreatorTest {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
         Foo foo = (Foo) applicationContext.getBean("target");
-        System.out.println(foo);
+        foo.method1();
     }
 }
