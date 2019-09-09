@@ -22,7 +22,7 @@ public class PerformanceTraceAspect {
 
     private final Log logger = LogFactory.getLog(PerformanceTraceAspect.class);
 
-    @Pointcut(value = "execution(public void *.method1()) || execution(public void *.method2())")
+    @Pointcut(value = "execution(public void com.ljj.aop.chapter10.*.method1()) || execution(public void com.ljj.aop.chapter10.*.method2())")
     public void pointcutName() {
     }
 
