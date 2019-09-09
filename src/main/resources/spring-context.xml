@@ -170,11 +170,19 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</property>-->
     <!--</bean>-->
 
-    <bean id="user" class="com.ljj.ioc.chapter4.User">
-        <property name="date">
-            <value>2019/09/04</value>
-        </property>
+    <!--<bean id="user" class="com.ljj.ioc.chapter4.User">-->
+    <!--<property name="date">-->
+    <!--<value>2019/09/04</value>-->
+    <!--</property>-->
+    <!--</bean>-->
+
+    <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator">
+        <property name="proxyTargetClass" value="true"></property>
     </bean>
+
+    <bean id="performanceAspect" class="com.ljj.aop.chapter10.PerformanceTraceAspect"></bean>
+
+    <bean id="target" class="com.ljj.aop.chapter10.Foo"></bean>
 
 
 </beans>
