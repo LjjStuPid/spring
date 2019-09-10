@@ -1,6 +1,5 @@
 package com.ljj.aop.chapter10;
 
-import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -18,10 +17,17 @@ public class AspectJTest {
     public void pointcut() {
     }
 
-    @Before(value = "pointcut() && args(dd)")
-    public void before(String dd) throws Throwable {
-        System.out.println(dd);
+//    @Before(value = "pointcut() && args(user)")
+//    public void before(User user) throws Throwable {
+//        System.out.println(user);
+//
+//    }
 
+
+    @Before(value = "pointcut() && args(user,m)")
+    public void before(User user,String m) throws Throwable {
+
+        System.out.println(user);
     }
 
 //    @Around(value = "pointcut()")
@@ -40,7 +46,7 @@ public class AspectJTest {
         User user = new User();
         user.setUsername("liu");
         user.setPassword("1223456");
-        ((MockTarget) proxy).test3(user);
+        ((MockTarget) proxy).test3(user,"dfafas");
 //        ((Foo)proxy).method1();
 //        ((Foo)proxy).method2();
     }

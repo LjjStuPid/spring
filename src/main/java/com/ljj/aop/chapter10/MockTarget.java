@@ -11,7 +11,7 @@ public class MockTarget {
         System.out.println("MockTarget-test===");
     }
 
-    public void test3(User user) {
+    public void test3(User user, String dsa) {
         System.out.println("test3");
         System.out.println(user);
     }
