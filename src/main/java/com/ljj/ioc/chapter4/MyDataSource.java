@@ -6,7 +6,7 @@ package com.ljj.ioc.chapter4;
  * @Date 2019/9/2 18:32
  */
 
-public class DataSource {
+public class MyDataSource {
 
     private String username;
 
@@ -30,7 +30,7 @@ public class DataSource {
 
     @Override
     public String toString() {
-        return "DataSource{" +
+        return "MyDataSource{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';

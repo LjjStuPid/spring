@@ -153,7 +153,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--<bean id="beanPostProcessorDemo" class="com.ljj.ioc.BeanPostProcessorDemo"></bean>-->
     <!--<bean id="demo" class="com.ljj.ioc.Demo" scope="singleton"></bean>-->
 
-    <!--<bean id="dataSource" class="com.ljj.ioc.chapter4.DataSource">-->
+    <!--<bean id="dataSource" class="com.ljj.ioc.chapter4.MyDataSourcece">-->
     <!--<property name="username">-->
     <!--<value>${jdbc.username}</value>-->
     <!--</property>-->

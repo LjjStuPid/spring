@@ -1,11 +1,11 @@
 package com.ljj.db.chapter14;
 
-import com.ljj.ioc.chapter4.DataSource;
-import oracle.jdbc.pool.OracleDataSource;
-import org.springframework.jdbc.datasource.DelegatingDataSource;
 
+import oracle.jdbc.pool.OracleDataSource;
+import org.springframework.jdbc.datasource.DataSourceUtils;
+
+import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
@@ -16,11 +16,13 @@ import java.sql.SQLException;
 public class DbConnection {
 
     public static void main(String[] args) throws SQLException {
-        javax.sql.DataSource  dataSource = new OracleDataSource();
         Long start = System.currentTimeMillis();
         try {
-            DriverManager.setLoginTimeout(1);
-            Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@193.168.70.11:1521:interpay", "interdb", "interdb");
+            DataSource dataSource = new OracleDataSource();
+            ((OracleDataSource) dataSource).setURL("jdbc:oracle:thin:@192.168.70.11:1521:interpay");
+            ((OracleDataSource) dataSource).setUser("interdb");
+            ((OracleDataSource) dataSource).setPassword("interdb");
+            Connection connection = DataSourceUtils.getConnection(dataSource);
             System.out.println(connection);
         } finally {
             Long end = System.currentTimeMillis();
