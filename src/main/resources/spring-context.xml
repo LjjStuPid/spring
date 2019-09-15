@@ -176,13 +176,22 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</property>-->
     <!--</bean>-->
 
-    <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator">
-        <property name="proxyTargetClass" value="true"></property>
-    </bean>
+    <!--<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator">-->
+    <!--<property name="proxyTargetClass" value="true"></property>-->
+    <!--</bean>-->
 
-    <bean id="performanceAspect" class="com.ljj.aop.chapter10.PerformanceTraceAspect"></bean>
+    <!--<bean id="performanceAspect" class="com.ljj.aop.chapter10.PerformanceTraceAspect"></bean>-->
 
-    <bean id="target" class="com.ljj.aop.chapter10.Foo"></bean>
+    <!--<bean id="target" class="com.ljj.aop.chapter10.Foo"></bean>-->
+
+    <!--<bean id="increment" class="org.springframework.jdbc.support.incrementer.MySQLMaxValueIncrementer">-->
+    <!--<property name="dataSource"></property>-->
+    <!--</bean>-->
+
+    <!--<bean id="student" class="com.ljj.db.chapter14.Student">-->
+    <!--<property name="user" ref="ff"/>-->
+    <!--<property name="s" ref="environment"></property>-->
+    <!--</bean>-->
 
 
 </beans>
