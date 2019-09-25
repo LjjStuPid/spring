@@ -4,11 +4,16 @@ import com.ljj.ioc.chapter4.User;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.util.Arrays;
 
 public class Test {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParserConfigurationException {
+
+        DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+        documentBuilderFactory.setFeature("",false);
 
         byte[] bytes = new byte[100];
         Arrays.toString(bytes);
