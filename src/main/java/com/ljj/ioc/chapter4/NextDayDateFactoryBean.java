@@ -1,9 +1,11 @@
 package com.ljj.ioc.chapter4;
 
 import org.springframework.beans.factory.FactoryBean;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 
+//@Repository
 public class NextDayDateFactoryBean implements FactoryBean {
 
     @Override
