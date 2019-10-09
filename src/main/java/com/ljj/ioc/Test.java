@@ -11,12 +11,6 @@ import java.util.Arrays;
 public class Test {
 
     public static void main(String[] args) throws ParserConfigurationException {
-
-        DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-        documentBuilderFactory.setFeature("",false);
-
-        byte[] bytes = new byte[100];
-        Arrays.toString(bytes);
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
 //        MyDataSource dataSource = (MyDataSource) applicationContext.getBean("dataSource");
 //        System.out.println(dataSource);

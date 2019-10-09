@@ -5,7 +5,7 @@ package com.ljj.ioc.chapter2.cglib;
  * @Description TODO
  * @Date 2019/9/26 11:08
  */
-public final class HelloService {
+public  class HelloService {
 
     public HelloService() {
         System.out.println("HelloService构造");
