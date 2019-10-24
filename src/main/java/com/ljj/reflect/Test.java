@@ -1,9 +1,15 @@
 package com.ljj.reflect;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class Test {
 
     public static void main(String[] args) {
-        int modifier = Test.class.getModifiers();
-        System.out.println(modifier);
+
+        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        executorService.execute(()->{
+            System.out.println("wer");
+        });
     }
 }
