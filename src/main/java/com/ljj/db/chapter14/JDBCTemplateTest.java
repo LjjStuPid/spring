@@ -33,7 +33,7 @@ public class JDBCTemplateTest {
 
 
     public static int update(JdbcTemplate jdbcTemplate) {
-        int update = jdbcTemplate.update("update user t set t.password=? where t.id=?", new PreparedStatementSetter() {
+        int update = jdbcTemplate.update("update user t set t.password1=? where t.id=?", new PreparedStatementSetter() {
             @Override
             public void setValues(PreparedStatement ps) throws SQLException {
                 ps.setString(1, "575425435");
