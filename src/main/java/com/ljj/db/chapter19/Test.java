@@ -24,6 +24,7 @@ public class Test {
 
         DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
         dataSourceTransactionManager.setDataSource(basicDataSource);
+
         DefaultTransactionDefinition defaultTransactionDefinition = new DefaultTransactionDefinition();
         defaultTransactionDefinition.setPropagationBehavior(TransactionDefinition.PROPAGATION_NOT_SUPPORTED);
 
