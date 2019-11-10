@@ -3,9 +3,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd"
 >
-    <!--<context:component-scan base-package="com.ljj.ioc"></context:component-scan>-->
+    <!--<context:component-scan base-package="com.ljj.spring.ioc"></context:component-scan>-->
     <!--&lt;!&ndash;<description>这是一个描述文件</description>&ndash;&gt;-->
-    <!--<bean id="FXNewsProvider" class="com.ljj.ioc.chapter4.FXNewsProvider">-->
+    <!--<bean id="FXNewsProvider" class="com.ljj.spring.ioc.chapter4.FXNewsProvider">-->
     <!--<property name="newsListener">-->
 
     <!--default-lazy-init="true"-->
@@ -16,7 +16,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="mockMapObject" class="com.ljj.ioc.chapter4.MockMapObject">-->
+    <!--<bean id="mockMapObject" class="com.ljj.spring.ioc.chapter4.MockMapObject">-->
     <!--<property name="mapping">-->
     <!--<map>-->
     <!--<entry key="strValueKey">-->
@@ -29,13 +29,13 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="mockBO" class="com.ljj.ioc.chapter4.MockBusinessObject">-->
+    <!--<bean id="mockBO" class="com.ljj.spring.ioc.chapter4.MockBusinessObject">-->
     <!--<property name="dependency1">-->
     <!--<idref bean="djNewsListener"/>-->
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="mockDemoObject" class="com.ljj.ioc.chapter4.MockDemoObject">-->
+    <!--<bean id="mockDemoObject" class="com.ljj.spring.ioc.chapter4.MockDemoObject">-->
     <!--<property name="param1">-->
     <!--<list>-->
     <!--<value>something</value>-->
@@ -50,13 +50,13 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="djNewsListener" class="com.ljj.ioc.chapter4.impl.DowJonesNewsListener"></bean>-->
-    <!--<bean id="djNewsPersister" class="com.ljj.ioc.chapter4.impl.DowJonesNewsListener"></bean>-->
+    <!--<bean id="djNewsListener" class="com.ljj.spring.ioc.chapter4.impl.DowJonesNewsListener"></bean>-->
+    <!--<bean id="djNewsPersister" class="com.ljj.spring.ioc.chapter4.impl.DowJonesNewsListener"></bean>-->
 
     <!--&lt;!&ndash;启动注解扫描&ndash;&gt;-->
     <!--<context:component-scan base-package="com.ljj.*"></context:component-scan>-->
 
-    <!--<bean id="mockBO" class="com.ljj.ioc.chapter4.MockBusinessObject">-->
+    <!--<bean id="mockBO" class="com.ljj.spring.ioc.chapter4.MockBusinessObject">-->
     <!--<constructor-arg index="1">-->
     <!--<value>11111</value>-->
     <!--</constructor-arg>-->
@@ -66,37 +66,37 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</bean>-->
 
 
-    <!--<bean id="foo" class="com.ljj.ioc.chapter4.Foo">-->
+    <!--<bean id="foo" class="com.ljj.spring.ioc.chapter4.Foo">-->
     <!--<property name="barInterface">-->
     <!--<ref bean="bar"/>-->
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="bar" class="com.ljj.ioc.chapter4.BarInterfaceFactory" factory-method="getInstance"></bean>-->
+    <!--<bean id="bar" class="com.ljj.spring.ioc.chapter4.BarInterfaceFactory" factory-method="getInstance"></bean>-->
 
-    <!--<bean id="nextDayDate" class="com.ljj.ioc.chapter4.NextDayDateFactoryBean">-->
+    <!--<bean id="nextDayDate" class="com.ljj.spring.ioc.chapter4.NextDayDateFactoryBean">-->
     <!--</bean>-->
 
-    <!--<bean id="nextDayDateDisplayer" class="com.ljj.ioc.chapter4.NextDayDateDisplayer">-->
+    <!--<bean id="nextDayDateDisplayer" class="com.ljj.spring.ioc.chapter4.NextDayDateDisplayer">-->
     <!--<property name="dateOfNextDay">-->
     <!--<ref bean="nextDayDate"/>-->
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="newsBean" class="com.ljj.ioc.chapter4.FXNewBean" scope="prototype"></bean>-->
+    <!--<bean id="newsBean" class="com.ljj.spring.ioc.chapter4.FXNewBean" scope="prototype"></bean>-->
 
-    <!--<bean id="mockPersister" class="com.ljj.ioc.chapter4.MockNewsPersister">-->
+    <!--<bean id="mockPersister" class="com.ljj.spring.ioc.chapter4.MockNewsPersister">-->
     <!--<lookup-method name="getFxNewBean" bean="newsBean"/>-->
     <!--</bean>-->
 
 
-    <!--<bean id="dateFoo" class="com.ljj.ioc.chapter4.DateFoo">-->
+    <!--<bean id="dateFoo" class="com.ljj.spring.ioc.chapter4.DateFoo">-->
     <!--<property name="date">-->
     <!--<value>2017/10/16</value>-->
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="datePropertyEditor" class="com.ljj.ioc.chapter4.DatePropertyEditor">-->
+    <!--<bean id="datePropertyEditor" class="com.ljj.spring.ioc.chapter4.DatePropertyEditor">-->
     <!--<property name="datePattern">-->
     <!--<value>yyyy/MM/dd</value>-->
     <!--</property>-->
@@ -121,23 +121,23 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="datePropertyEditorRegistar" class="com.ljj.ioc.chapter4.DatePropertyEditorRegistar">-->
+    <!--<bean id="datePropertyEditorRegistar" class="com.ljj.spring.ioc.chapter4.DatePropertyEditorRegistar">-->
     <!--<property name="propertyEditor">-->
     <!--<ref bean="datePropertyEditor"/>-->
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="datePropertyEditor" class="com.ljj.ioc.chapter4.DatePropertyEditor">-->
+    <!--<bean id="datePropertyEditor" class="com.ljj.spring.ioc.chapter4.DatePropertyEditor">-->
     <!--<property name="datePattern">-->
     <!--<value>yyyy/MM/dd</value>-->
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="passwordDecoderPostProcessor" class="com.ljj.ioc.chapter4.PasswordDecodePostProcessor">-->
+    <!--<bean id="passwordDecoderPostProcessor" class="com.ljj.spring.ioc.chapter4.PasswordDecodePostProcessor">-->
 
     <!--</bean>-->
 
-    <!--<bean id="bar11" class="com.ljj.ioc.chapter4.Bar">-->
+    <!--<bean id="bar11" class="com.ljj.spring.ioc.chapter4.Bar">-->
     <!--<property name="username">-->
     <!--<value>fff</value>-->
     <!--</property>-->
@@ -146,14 +146,14 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="methodExecListener" class="com.ljj.ioc.chapter5.eventpublish.spring.MethodExecutrionEventListener"></bean>-->
+    <!--<bean id="methodExecListener" class="com.ljj.spring.ioc.chapter5.eventpublish.spring.MethodExecutrionEventListener"></bean>-->
 
-    <!--<bean id="evtPublisher" class="com.ljj.ioc.chapter5.eventpublish.spring.MethodExecutionEventPublisher"></bean>-->
+    <!--<bean id="evtPublisher" class="com.ljj.spring.ioc.chapter5.eventpublish.spring.MethodExecutionEventPublisher"></bean>-->
 
-    <!--<bean id="beanPostProcessorDemo" class="com.ljj.ioc.BeanPostProcessorDemo"></bean>-->
-    <!--<bean id="demo" class="com.ljj.ioc.Demo" scope="singleton"></bean>-->
+    <!--<bean id="beanPostProcessorDemo" class="com.ljj.spring.ioc.BeanPostProcessorDemo"></bean>-->
+    <!--<bean id="demo" class="com.ljj.spring.ioc.Demo" scope="singleton"></bean>-->
 
-    <!--<bean id="dataSource" class="com.ljj.ioc.chapter4.MyDataSourcece">-->
+    <!--<bean id="dataSource" class="com.ljj.spring.ioc.chapter4.MyDataSourcece">-->
     <!--<property name="username">-->
     <!--<value>${jdbc.username}</value>-->
     <!--</property>-->
@@ -170,7 +170,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</property>-->
     <!--</bean>-->
 
-    <!--<bean id="user" class="com.ljj.ioc.chapter4.User">-->
+    <!--<bean id="user" class="com.ljj.spring.ioc.chapter4.User">-->
     <!--<property name="date">-->
     <!--<value>2019/09/04</value>-->
     <!--</property>-->
@@ -180,15 +180,15 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--<property name="proxyTargetClass" value="true"></property>-->
     <!--</bean>-->
 
-    <!--<bean id="performanceAspect" class="com.ljj.aop.chapter10.PerformanceTraceAspect"></bean>-->
+    <!--<bean id="performanceAspect" class="com.ljj.spring.aop.chapter10.PerformanceTraceAspect"></bean>-->
 
-    <!--<bean id="target" class="com.ljj.aop.chapter10.Foo"></bean>-->
+    <!--<bean id="target" class="com.ljj.spring.aop.chapter10.Foo"></bean>-->
 
     <!--<bean id="increment" class="org.springframework.jdbc.support.incrementer.MySQLMaxValueIncrementer">-->
     <!--<property name="dataSource"></property>-->
     <!--</bean>-->
 
-    <!--<bean id="student" class="com.ljj.db.chapter14.Student">-->
+    <!--<bean id="student" class="com.ljj.spring.db.chapter14.Student">-->
     <!--<property name="user" ref="ff"/>-->
     <!--<property name="s" ref="environment"></property>-->
     <!--</bean>-->
