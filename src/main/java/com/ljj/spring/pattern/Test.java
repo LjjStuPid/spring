@@ -1,6 +1,6 @@
 package com.ljj.spring.pattern;
 
-        import java.lang.reflect.Proxy;
+import java.lang.reflect.Proxy;
 
 public class Test {
 

@@ -90,11 +90,11 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
     <!--</bean>-->
 
 
-    <!--<bean id="dateFoo" class="com.ljj.spring.ioc.chapter4.DateFoo">-->
-    <!--<property name="date">-->
-    <!--<value>2017/10/16</value>-->
-    <!--</property>-->
-    <!--</bean>-->
+    <bean id="dateFoo" class="com.ljj.spring.ioc.chapter4.DateFoo">
+        <property name="date">
+            <value>2017/10/16</value>
+        </property>
+    </bean>
 
     <!--<bean id="datePropertyEditor" class="com.ljj.spring.ioc.chapter4.DatePropertyEditor">-->
     <!--<property name="datePattern">-->
