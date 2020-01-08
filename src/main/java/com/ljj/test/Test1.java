@@ -9,12 +9,7 @@ public class Test1 {
 
     public static void main(String[] args) {
 
-        threadPoolExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("www");
-            }
-        });
+        threadPoolExecutor.execute(() -> System.out.println("www"));
         test();
     }
 
