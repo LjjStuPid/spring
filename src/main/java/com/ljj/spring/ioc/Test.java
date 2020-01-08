@@ -1,12 +1,11 @@
 package com.ljj.spring.ioc;
 
 import com.ljj.spring.ioc.chapter4.User;
+import org.springframework.beans.BeanUtils;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import java.util.Arrays;
 
 public class Test {
 
@@ -14,6 +13,16 @@ public class Test {
 //        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
 //        MyDataSource dataSource = (MyDataSource) applicationContext.getBean("dataSource");
 //        System.out.println(dataSource);
+
+//        Teacher teacher = new Teacher();
+//        teacher.setId("ddd");
+//        teacher.setName("dafadfdaf");
+//        Student student = new Student();
+//        student.setAge(34);
+//        teacher.setStudent(student);
+//        Teacher1 teacher1 = new Teacher1();
+//        BeanUtils.copyProperties(teacher, teacher1);
+//        System.out.println(teacher1);
 
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-context.xml");
         User user = (User) applicationContext.getBean("user");
