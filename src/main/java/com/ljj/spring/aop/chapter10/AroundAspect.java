@@ -13,7 +13,7 @@ import org.springframework.aop.aspectj.annotation.AspectJProxyFactory;
 @Aspect
 public class AroundAspect {
 
-    @Around(value = "execution(Integer com.ljj.spring.aop.chapter10.AroundTest.test(String)) && args(taskName)")
+//    @Around(value = "execution(Integer com.ljj.spring.aop.chapter10.AroundTest.test(String)) && args(taskName)")
     public void around(ProceedingJoinPoint joinPoint, String taskName) throws Throwable {
 
         System.out.println("任务名:" + taskName);
