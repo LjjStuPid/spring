@@ -15,7 +15,7 @@ public class MockTask implements ITask {
         MockTask task = new MockTask();
         ProxyFactory weaver = new ProxyFactory();
         weaver.setTarget(task);
-//        weaver.setInterfaces(new Class[]{ITask.class});
+        weaver.setInterfaces(new Class[]{ITask.class});
         NameMatchMethodPointcutAdvisor advisor = new NameMatchMethodPointcutAdvisor();
         advisor.setMappedName("execute");
         advisor.setAdvice(new PerformanceMethodInterctptor());

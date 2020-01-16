@@ -24,7 +24,6 @@ public class UserServiceImpl implements UserService {
         DDD ddd = new DDD();
         Annotation[] annotations = ddd.getClass().getAnnotations();
         for (Annotation annotation : annotations) {
-
             Annotation[] annotations1 = annotation.annotationType().getAnnotations();
             for (Annotation annotation1 : annotations1) {
                 System.out.println(annotation1.toString());
