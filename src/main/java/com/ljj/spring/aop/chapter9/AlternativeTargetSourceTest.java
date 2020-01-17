@@ -18,6 +18,7 @@ public class AlternativeTargetSourceTest {
         TargetSource targetSource = new AlternativeTargetSource(task1, task2);
         pf.setTargetSource(targetSource);
         ITask proxy = (ITask) pf.getProxy();
+        System.out.println(proxy);
         proxy.execute(null);
         proxy.execute(null);
         proxy.execute(null);
