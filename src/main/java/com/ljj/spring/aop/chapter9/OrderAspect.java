@@ -2,8 +2,8 @@ package com.ljj.spring.aop.chapter9;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
 
 /**
  * @Author liujj
@@ -11,10 +11,10 @@ import org.aspectj.lang.annotation.Pointcut;
  * @Date 2020/1/17 10:55
  */
 @Aspect
+@Component
 public class OrderAspect {
 
-
-    @Pointcut("execution(* com.ljj.spring.aop.chapter9.OrderServiceImpl.*())")
+    @Pointcut("execution(* com.ljj.spring.aop.chapter9.OrderService.*())")
     public void pointcut() {
 
     }

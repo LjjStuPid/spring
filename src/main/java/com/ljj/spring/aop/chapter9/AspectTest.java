@@ -1,6 +1,8 @@
 package com.ljj.spring.aop.chapter9;
 
-import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
+import org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -13,11 +15,17 @@ public class AspectTest {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();
         annotationConfigApplicationContext.scan("com.ljj.spring.aop.chapter9");
-        DefaultAdvisorAutoProxyCreator defaultAdvisorAutoProxyCreator = new DefaultAdvisorAutoProxyCreator();
-        defaultAdvisorAutoProxyCreator.setProxyTargetClass(true);
-        annotationConfigApplicationContext.re
+
+        BeanDefinition beanDefinition = new RootBeanDefinition(AnnotationAwareAspectJAutoProxyCreator.class);
+        beanDefinition.getPropertyValues().add("exposeProxy", true);
+
+        annotationConfigApplicationContext.registerBeanDefinition("mccdas", beanDefinition);
+//        annotationConfigApplicationContext.getBeanDefinition()
         annotationConfigApplicationContext.refresh();
-        OrderService orderService = (OrderService) annotationConfigApplicationContext.getBean("orderServiceImpl");
-        System.out.println(orderService.updateOrder());
+
+
+        OrderService bean = (OrderService) annotationConfigApplicationContext.getBean("orderServiceImpl");
+        System.out.println(bean);
+        System.out.println(bean.updateOrder());
     }
 }
