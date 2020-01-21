@@ -11,7 +11,9 @@ import org.apache.dubbo.common.extension.ExtensionLoader;
 public class ExtensionLoaderDemo {
     public static void main(String[] args) {
         URL url = URL.valueOf("dubbo://192.168.0.101:20880?plants.water=banana");
-        PlantsWater plantsWater = ExtensionLoader.getExtensionLoader(PlantsWater.class).getAdaptiveExtension();
+
+        ExtensionLoader<PlantsWater> extensionLoader = ExtensionLoader.getExtensionLoader(PlantsWater.class);
+        PlantsWater plantsWater = extensionLoader.getAdaptiveExtension();
 
         String result = plantsWater.watering(url);
         System.out.println(result);

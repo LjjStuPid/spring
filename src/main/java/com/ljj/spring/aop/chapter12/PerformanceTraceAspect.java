@@ -14,11 +14,11 @@ public class PerformanceTraceAspect {
 
     private final Log logger = LogFactory.getLog(PerformanceTraceAspect.class);
 
-    @Pointcut("execution(public void com.ljj.spring.aop.chapter12.*.method1())")
+    @Pointcut("execution(void com.ljj.spring.aop.chapter12.*.*(..))")
     public void method1() {
     }
 
-    @Pointcut("execution(public void com.ljj.spring.aop.chapter12.*.method2())")
+    @Pointcut("execution(void com.ljj.spring.aop.chapter12.*.*(..))")
     public void method2() {
     }
 
@@ -34,9 +34,8 @@ public class PerformanceTraceAspect {
             return joinPoint.proceed();
         } finally {
             watch.stop();
-            if (logger.isInfoEnabled()) {
-                logger.info("PT in method[" + joinPoint.getSignature().getName() + "]>>>>" + watch.toString());
-            }
+            System.out.println("PT in method[" + joinPoint.getSignature().getName() + "]>>>>" + watch.toString());
+
         }
     }
 
@@ -46,7 +45,7 @@ public class PerformanceTraceAspect {
         weaver.setExposeProxy(true);
         weaver.addAspect(PerformanceTraceAspect.class);
         Object proxy = weaver.getProxy();
-        ((NestableInvocationBO) proxy).method2();
+//        ((NestableInvocationBO) proxy).method2();
         ((NestableInvocationBO) proxy).method1();
     }
 
