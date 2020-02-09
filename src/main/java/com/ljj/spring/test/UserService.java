@@ -1,6 +1,5 @@
 package com.ljj.spring.test;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,9 +12,11 @@ public class UserService {
 
     private OrderService orderService;
 
-    @Autowired
-    private UserService(OrderService orderService) {
-        this.orderService = orderService;
+    public OrderService getOrderService() {
+        return orderService;
     }
 
+    public void setOrderService(OrderService orderService) {
+        this.orderService = orderService;
+    }
 }

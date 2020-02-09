@@ -12,10 +12,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class OrderService {
 
+    @Autowired
     private UserService userService;
 
-    @Autowired
-    public OrderService(UserService userService) {
+    public UserService getUserService() {
+        return userService;
+    }
+
+    public void setUserService(UserService userService) {
         this.userService = userService;
     }
 }
