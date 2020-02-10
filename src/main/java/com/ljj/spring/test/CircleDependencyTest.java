@@ -12,6 +12,7 @@ public class CircleDependencyTest {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext();
+        ((AnnotationConfigApplicationContext) applicationContext).setAllowCircularReferences(false);
         ((AnnotationConfigApplicationContext) applicationContext).scan("com.ljj.spring.test");
         ((AnnotationConfigApplicationContext) applicationContext).refresh();
         OrderService orderService = (OrderService) applicationContext.getBean("orderService");
