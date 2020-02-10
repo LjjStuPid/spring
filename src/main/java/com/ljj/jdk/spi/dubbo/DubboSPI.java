@@ -1,8 +1,8 @@
 package com.ljj.jdk.spi.dubbo;
 
-import com.alibaba.dubbo.common.extension.ExtensionLoader;
 import com.alibaba.dubbo.rpc.Protocol;
-import com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol;
+import org.apache.dubbo.common.extension.ExtensionLoader;
+import org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol;
 
 public class DubboSPI {
 

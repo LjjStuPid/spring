@@ -30,7 +30,7 @@ public class Test implements Serializable {
 //        System.out.println(enumEditor.getValue().getClass());
 //
 //        ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("www.txt"));
-//        objectOutputStream.writeObject(new Test());
+//        objectOutputStream.writeObject(new TestD());
 
         ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("www.txt"));
         Object object = objectInputStream.readObject();
