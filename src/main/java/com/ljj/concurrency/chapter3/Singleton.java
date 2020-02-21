@@ -19,7 +19,7 @@ public class Singleton {
 
     public static void main(String[] args) {
         CountDownLatch countDownLatch = new CountDownLatch(1);
-        for (int i = 0; i < 40; i++) {
+        for (int i = 0; i < 100; i++) {
             new Thread(() -> {
                 try {
                     countDownLatch.await();
