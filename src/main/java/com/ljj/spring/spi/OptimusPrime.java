@@ -7,7 +7,7 @@ import org.apache.dubbo.common.extension.Adaptive;
  * @Description TODO
  * @Date 2020/1/20 9:03
  */
-//@Adaptive
+@Adaptive
 public class OptimusPrime implements Robot {
     @Override
     public void sayHello() {

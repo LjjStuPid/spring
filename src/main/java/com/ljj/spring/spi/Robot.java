@@ -1,5 +1,6 @@
 package com.ljj.spring.spi;
 
+import org.apache.dubbo.common.extension.Adaptive;
 import org.apache.dubbo.common.extension.SPI;
 
 /**
@@ -10,5 +11,6 @@ import org.apache.dubbo.common.extension.SPI;
 @SPI
 public interface Robot {
 
+    @Adaptive
     void sayHello();
 }

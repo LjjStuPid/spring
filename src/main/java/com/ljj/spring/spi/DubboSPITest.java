@@ -10,13 +10,17 @@ import org.apache.dubbo.common.extension.ExtensionLoader;
 public class DubboSPITest {
 
     public static void main(String[] args) {
-//        ExtensionLoader<Robot> extensionLoader = ExtensionLoader.getExtensionLoader(Robot.class);
 
-        Robot robot = ExtensionLoader.getExtensionLoader(Robot.class).getAdaptiveExtension();
+        ExtensionLoader<Robot> extensionLoader = ExtensionLoader.getExtensionLoader(Robot.class);
 
+//        Robot robot = ExtensionLoader.getExtensionLoader(Robot.class).getAdaptiveExtension();
+//
+//        robot.sayHello();
+
+        Robot robot = extensionLoader.getAdaptiveExtension();
         robot.sayHello();
 
-//
+
 //        Robot optimusPrime = extensionLoader.getExtension("optimusPrime");
 //
 //        optimusPrime.sayHello();
