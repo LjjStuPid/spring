@@ -6,19 +6,11 @@ public class Test {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();
+        annotationConfigApplicationContext.register(org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.class);
         annotationConfigApplicationContext.scan("com.ljj.spring.aop.test");
         annotationConfigApplicationContext.refresh();
 
-
-        String[] strings = annotationConfigApplicationContext.getBeanDefinitionNames();
-        for (String s : strings) {
-            System.out.println(s);
-        }
-
         UserService userService = (UserService) annotationConfigApplicationContext.getBean("userServiceImpl");
         userService.work();
-        System.out.println(userService);
-
-
     }
 }
