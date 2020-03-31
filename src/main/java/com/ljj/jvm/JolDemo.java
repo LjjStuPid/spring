@@ -32,12 +32,14 @@ public class JolDemo {
     }
 
     public static void main(String[] args) {
-        String object =  "刘雪梅";
+        String object =  "刘金剑";
 
-        print(ClassLayout.parseInstance(object).toPrintable());
+        Object o = new Object();
 
-        print(GraphLayout.parseInstance(object).toPrintable());
+        print(ClassLayout.parseInstance(o).toPrintable());
 
-        print("size :  " + GraphLayout.parseInstance(object).totalSize());
+        print(GraphLayout.parseInstance(o).toPrintable());
+
+        print("size :  " + GraphLayout.parseInstance(o).totalSize());
     }
 }
