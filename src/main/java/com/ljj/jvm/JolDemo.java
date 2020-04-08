@@ -3,6 +3,7 @@ package com.ljj.jvm;
 import org.openjdk.jol.info.ClassLayout;
 import org.openjdk.jol.info.GraphLayout;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -32,14 +33,16 @@ public class JolDemo {
     }
 
     public static void main(String[] args) {
-        String object =  "刘金剑";
 
-        Object o = new Object();
 
-        print(ClassLayout.parseInstance(o).toPrintable());
+//        QuickPayTransaction quickPayTransaction = new QuickPayTransaction();
 
-        print(GraphLayout.parseInstance(o).toPrintable());
+        ArrayList arrayList = new ArrayList();
 
-        print("size :  " + GraphLayout.parseInstance(o).totalSize());
+        print(ClassLayout.parseInstance(arrayList).toPrintable());
+
+        print(GraphLayout.parseInstance(arrayList).toPrintable());
+
+        print("size :  " + GraphLayout.parseInstance(arrayList).totalSize());
     }
 }
