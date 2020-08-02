@@ -43,14 +43,14 @@
             </exclusions>
         </dependency>
 
-        <!-- 4.Spring test依赖：方便做单元测试和集成测试 -->
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-testD -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-testD</artifactId>
-            <version>5.1.9.RELEASE</version>
-            <scope>testD</scope>
-        </dependency>
+<!--        &lt;!&ndash; 4.Spring test依赖：方便做单元测试和集成测试 &ndash;&gt;-->
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-testD &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework</groupId>-->
+<!--            <artifactId>spring-testD</artifactId>-->
+<!--            <version>5.1.9.RELEASE</version>-->
+<!--            <scope>testD</scope>-->
+<!--        </dependency>-->
 
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
@@ -85,11 +85,11 @@
         </dependency>
 
 
-        <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib</artifactId>
-            <version>2.1</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>cglib</groupId>-->
+<!--            <artifactId>cglib</artifactId>-->
+<!--            <version>2.1</version>-->
+<!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-expression -->
         <dependency>
@@ -164,11 +164,11 @@
             <version>5.4.4.Final</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.3</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.httpcomponents</groupId>-->
+<!--            <artifactId>httpclient</artifactId>-->
+<!--            <version>4.5.3</version>-->
+<!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
@@ -259,12 +259,12 @@
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
-        <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>11.2.0.1.0</version>
-        </dependency>
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.oracle/ojdbc14 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.oracle</groupId>-->
+<!--            <artifactId>ojdbc6</artifactId>-->
+<!--            <version>11.2.0.1.0</version>-->
+<!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/com.lmax/disruptor -->
         <dependency>
